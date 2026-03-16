@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma Loussaif | Data & Intelligence Systems</title>
+    <meta name="description"
+        content="Portfolio d'Emma Loussaif - Master 1 Data & IA. Systèmes intelligents, automatisés et mesurables.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="fluid-background"></div>
+    <div class="grid-overlay"></div>
+    <div class="noise-overlay"></div>
+
+    <div id="mainContent">
+
+        <!-- Logo -->
+        <a href="#" class="site-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            <img src="./logo.png" alt="Emma Loussaif Logo" />
+        </a>
+
+        <div class="neon-scanner">
+            <div class="neon-bar" id="scrollProgress"></div>
+        </div>
+
+        <div class="data-cursor" id="dataCursor">
+            <div class="cursor-ring"></div>
+            <div class="cursor-dot"></div>
+        </div>
+
+        <!-- Magnetic Dock -->
+        <nav class="magnetic-dock" id="magneticDock">
+            <!-- Accueil -->
+            <button class="dock-item" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+                <span class="dock-tooltip">Accueil</span>
+            </button>
+            <!-- Projets (Layout/Grid icon) -->
+            <button class="dock-item"
+                onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7" rx="1" />
+                    <rect x="14" y="3" width="7" height="4" rx="1" />
+                    <rect x="14" y="10" width="7" height="11" rx="1" />
+                    <rect x="3" y="13" width="7" height="8" rx="1" />
+                </svg>
+                <span class="dock-tooltip">Projets</span>
+            </button>
+            <!-- Skills (Brain icon) -->
+            <button class="dock-item dock-brain"
+                onclick="document.getElementById('neural-stack').scrollIntoView({behavior: 'smooth'})">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                    <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+                    <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+                    <path d="M12 18v4" />
+                </svg>
+                <span class="dock-tooltip">Skills</span>
+            </button>
+            <!-- CV -->
+            <a class="dock-item cv-download-btn" href="./assets/cv-emma-loussaif-2026.png"
+                download="CV_Emma_Loussaif.png">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" x2="12" y1="15" y2="3" />
+                </svg>
+                <span class="dock-tooltip">CV</span>
+            </a>
+            <!-- Email -->
+            <a class="dock-item" href="mailto:emloussaif@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span class="dock-tooltip">Email</span>
+            </a>
+            <!-- Téléphone -->
+            <a class="dock-item" href="tel:+33768491775">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span class="dock-tooltip">Téléphone</span>
+            </a>
+            <!-- LinkedIn -->
+            <a class="dock-item" href="https://www.linkedin.com/in/emma-loussaif" target="_blank"
+                rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
+                </svg>
+                <span class="dock-tooltip">LinkedIn</span>
+            </a>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hud-frame">
+                    <div class="hud-corner hud-corner-tl"></div>
+                    <div class="hud-corner hud-corner-tr"></div>
+                    <div class="hud-corner hud-corner-br"></div>
+                    <div class="hud-corner hud-corner-bl"></div>
+                    <div class="hero-content">
+                        <p class="hero-label">Neural Interface v2.0</p>
+                        <h1 class="hero-title"><span class="glitch-text" data-text="Emma Loussaif">Emma Loussaif</span>
+                        </h1>
+                        <h2 class="hero-subtitle">À la recherche d'une Alternance<br>dans la Data et l'Intelligence
+                            Artificielle</h2>
+                        <p class="hero-description">Étudiante en 1ère année de Data & IA — Forte d'un solide background
+                            en marketing digital, je fusionne stratégie créative et ingénierie de la donnée pour
+                            concevoir des systèmes intelligents, automatisés et mesurables.</p>
+                        <div class="hero-ctas">
+                            <a href="./assets/cv-emma-loussaif-2026.png" download="CV_Emma_Loussaif.png"
+                                class="btn-primary cv-download-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="7 10 12 15 17 10" />
+                                    <line x1="12" x2="12" y1="15" y2="3" />
+                                </svg>
+                                <span>Télécharger le CV</span>
+                            </a>
+                            <a href="mailto:emloussaif@gmail.com" class="btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                            </a>
+                            <a href="tel:+33768491775" class="btn-icon" style="border-color: rgba(6, 182, 212, 0.3);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" style="color: var(--cyan);">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="availability-badge"><span>Disponible immédiatement</span></div>
+                    </div>
+                    <div class="hud-metadata">
+                        <div class="metadata-item"><span class="metadata-label">Status</span><span
+                                class="metadata-value">Master Data & IA</span></div>
+                        <div class="metadata-item"><span class="metadata-label">Location</span><span
+                                class="metadata-value">Cergy-Pontoise, FR</span></div>
+                        <div class="metadata-item"><span class="metadata-label">Availability</span><span
+                                class="metadata-value">Immediate</span></div>
+                        <div class="metadata-item"><span class="metadata-label">Specialty</span><span
+                                class="metadata-value">AI Automation</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label"><span>02 — Projets</span></div>
+                    <h2 class="section-title">Showcase</h2>
+                </div>
+                <div class="projects-grid">
+                    <!-- ArtLink — Marketplace B2B2C Luxe -->
+                    <div class="tilt-card project-card" data-tilt>
+                        <div class="tilt-card-corner tilt-card-corner-tl"></div>
+                        <div class="tilt-card-corner tilt-card-corner-tr"></div>
+                        <div class="tilt-card-corner tilt-card-corner-br"></div>
+                        <div class="tilt-card-corner tilt-card-corner-bl"></div>
+                        <div class="project-header">
+                            <div class="project-icon"
+                                style="background: linear-gradient(135deg, rgba(123, 97, 255, 0.2), rgba(168, 85, 247, 0.1));">
+                                <img src="./assets/logoartlink.png" alt="ArtLink"
+                                    style="width: 28px; height: 28px; object-fit: contain;">
+                            </div>
+                            <a href="javascript:void(0)" class="project-link"
+                                onclick="openProjectModal('artlink-strategie')"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 7h10v10" />
+                                    <path d="M7 17 17 7" />
+                                </svg></a>
+                        </div>
+                        <p class="project-subtitle">Marketplace B2B2C</p>
+                        <h3 class="project-title">ArtLink — Marketplace B2B2C Luxe</h3>
+                        <p class="project-description">Plateforme e-commerce immersive permettant aux hôtels de luxe de
+                            circulariser et vendre leurs collections d'art à une clientèle exclusive et restreinte.</p>
+                        <div class="project-tags">
+                            <span class="project-tag"
+                                style="color: #7B61FF; border-color: rgba(123, 97, 255, 0.3);">B2B2C</span>
+                            <span class="project-tag"
+                                style="color: #7B61FF; border-color: rgba(123, 97, 255, 0.3);">Circular Economy</span>
+                            <span class="project-tag"
+                                style="color: #7B61FF; border-color: rgba(123, 97, 255, 0.3);">Premium UX</span>
+                        </div>
+                        <div class="project-footer"><span>Impact</span><span class="project-impact"
+                                style="color: #7B61FF;">Cercle Privé & Sécurisé</span></div>
+                    </div>
+                    <!-- BIC X KEITH HARING — Expérience Digitale & 3D -->
+                    <div class="tilt-card project-card" data-tilt>
+                        <div class="tilt-card-corner tilt-card-corner-tl"></div>
+                        <div class="tilt-card-corner tilt-card-corner-tr"></div>
+                        <div class="tilt-card-corner tilt-card-corner-br"></div>
+                        <div class="tilt-card-corner tilt-card-corner-bl"></div>
+                        <div class="project-header">
+                            <div class="project-icon"
+                                style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(37, 99, 235, 0.1));">
+                                <img src="./assets/logo-keithharing.png" alt="BIC X Keith Haring"
+                                    style="width: 28px; height: 28px; object-fit: contain;">
+                            </div>
+                            <a href="javascript:void(0)" class="project-link"
+                                onclick="openProjectModal('bic-keith-haring')"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 7h10v10" />
+                                    <path d="M7 17 17 7" />
+                                </svg></a>
+                        </div>
+                        <p class="project-subtitle">Expérience Digitale & 3D</p>
+                        <h3 class="project-title">BIC X KEITH HARING — Expérience Digitale & 3D</h3>
+                        <p class="project-description">Développement d'une plateforme e-commerce immersive "L'art prend
+                            vie" intégrant une modélisation 3D réelle des produits et une stratégie de gamification
+                            interactive.</p>
+                        <div class="project-tags">
+                            <span class="project-tag"
+                                style="color: #06B6D4; border-color: rgba(6, 182, 212, 0.3);">E-commerce</span>
+                            <span class="project-tag"
+                                style="color: #06B6D4; border-color: rgba(6, 182, 212, 0.3);">Modélisation 3D</span>
+                            <span class="project-tag"
+                                style="color: #06B6D4; border-color: rgba(6, 182, 212, 0.3);">Gamification</span>
+                        </div>
+                        <div class="project-footer"><span>Impact</span><span class="project-impact"
+                                style="color: #06B6D4;">Immersion Digitale Totale</span></div>
+                    </div>
+                    <!-- KUMO — Stratégie de Marque & SEA -->
+                    <div class="tilt-card project-card" data-tilt>
+                        <div class="tilt-card-corner tilt-card-corner-tl"></div>
+                        <div class="tilt-card-corner tilt-card-corner-tr"></div>
+                        <div class="tilt-card-corner tilt-card-corner-br"></div>
+                        <div class="tilt-card-corner tilt-card-corner-bl"></div>
+                        <div class="project-header">
+                            <div class="project-icon"
+                                style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(225, 29, 72, 0.1));">
+                                <img src="./assets/logo-kumo.png" alt="KUMO"
+                                    style="width: 28px; height: 28px; object-fit: contain;">
+                            </div>
+                            <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('kumo')"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M7 7h10v10" />
+                                    <path d="M7 17 17 7" />
+                                </svg></a>
+                        </div>
+                        <p class="project-subtitle">Stratégie de Marque & SEA</p>
+                        <h3 class="project-title">KUMO — Stratégie de Marque & SEA</h3>
+                        <p class="project-description">Création intégrale d'une marque de mode minimaliste : de
+                            l'identité visuelle ("Style Nuage") au lancement de campagnes Google Ads (Search, YouTube,
+                            Display) pour 2026.</p>
+                        <div class="project-tags">
+                            <span class="project-tag"
+                                style="color: #EC4899; border-color: rgba(236, 72, 153, 0.3);">Brand Identity</span>
+                            <span class="project-tag" style="color: #EC4899; border-color: rgba(236, 72, 153, 0.3);">SEA
+                                Strategy</span>
+                            <span class="project-tag"
+                                style="color: #EC4899; border-color: rgba(236, 72, 153, 0.3);">E-commerce</span>
+                        </div>
+                        <div class="project-footer"><span>Impact</span><span class="project-impact"
+                                style="color: #EC4899;">160M d'impressions visées</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Neural Stack Section -->
+        <section id="neural-stack">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label"><span>02.5 — Skills</span></div>
+                    <h2 class="section-title">Neural <span
+                            style="background: linear-gradient(135deg, var(--violet), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Stack</span>
+                    </h2>
+                </div>
+
+                <div class="neural-stack-container ns-v2">
+                    <!-- LEFT: Tools 4x4 Grid -->
+                    <div class="ns-grid">
+                        <div class="ns-icon" data-ns="0"><img src="./logos/Logo%20Antigravity.png" alt="Antigravity"
+                                class="ns-logo-img" /><span class="ns-name">Antigravity</span></div>
+                        <div class="ns-icon" data-ns="1"><img src="./logos/Logo%20ChatGPT.png" alt="ChatGPT"
+                                class="ns-logo-img" /><span class="ns-name">ChatGPT</span></div>
+                        <div class="ns-icon" data-ns="2"><img src="./logos/Logo%20Claude.png" alt="Claude"
+                                class="ns-logo-img" /><span class="ns-name">Claude</span></div>
+                        <div class="ns-icon" data-ns="3"><img src="./logos/Logo%20Gemini.png" alt="Gemini"
+                                class="ns-logo-img" /><span class="ns-name">Gemini</span></div>
+                        <div class="ns-icon" data-ns="4"><img src="./logos/Logo%20GitHub.png" alt="GitHub"
+                                class="ns-logo-img" /><span class="ns-name">GitHub</span></div>
+                        <div class="ns-icon" data-ns="5"><img src="./logos/Logo%20Google%20Ads.png" alt="Google Ads"
+                                class="ns-logo-img" /><span class="ns-name">Google Ads</span></div>
+                        <div class="ns-icon" data-ns="6"><img src="./logos/Logo%20Google%20Analytics.png"
+                                alt="Analytics" class="ns-logo-img" /><span class="ns-name">Analytics</span></div>
+                        <div class="ns-icon" data-ns="7"><img src="./logos/Logo%20Google%20Cloud.png" alt="Google Cloud"
+                                class="ns-logo-img" /><span class="ns-name">Google Cloud</span></div>
+                        <div class="ns-icon" data-ns="8"><img src="./logos/Logo%20n8n.png" alt="n8n"
+                                class="ns-logo-img" /><span class="ns-name">n8n</span></div>
+                        <div class="ns-icon" data-ns="9"><img src="./logos/Logo%20Lovable.png" alt="Lovable"
+                                class="ns-logo-img" /><span class="ns-name">Lovable</span></div>
+                        <div class="ns-icon" data-ns="10"><img src="./logos/Logo%20Manus.png" alt="Manus"
+                                class="ns-logo-img" /><span class="ns-name">Manus</span></div>
+                        <div class="ns-icon" data-ns="11"><img src="./logos/Logo%20Visual%20Studio%20Code.png"
+                                alt="VS Code" class="ns-logo-img" /><span class="ns-name">VS Code</span></div>
+                        <div class="ns-icon" data-ns="12"><img src="./logos/Logo%20Figma.png" alt="Figma"
+                                class="ns-logo-img" /><span class="ns-name">Figma</span></div>
+                        <div class="ns-icon" data-ns="13"><img src="./logos/Logo%20Illustrator.png" alt="Illustrator"
+                                class="ns-logo-img" /><span class="ns-name">Illustrator</span></div>
+                        <div class="ns-icon" data-ns="14"><img src="./logos/Logo%20Photoshop.png" alt="Photoshop"
+                                class="ns-logo-img" /><span class="ns-name">Photoshop</span></div>
+                        <div class="ns-icon" data-ns="15"><img src="./logos/Logo%20Premiere%20Pro.png"
+                                alt="Premiere Pro" class="ns-logo-img" /><span class="ns-name">Premiere</span></div>
+                    </div>
+
+                    <!-- Canvas for convergence lines (both sides) -->
+                    <canvas id="nsCanvas" class="ns-canvas"></canvas>
+
+                    <!-- CENTER: Brain Hologram + Quote -->
+                    <div class="ns-center">
+                        <div class="ns-brain-hub" id="nsCoreRing">
+                            <div class="ns-brain-glow" id="nsCoreGlow"></div>
+                            <img src="./brain-hologram.png" alt="Neural Core" class="ns-brain-img" />
+                            <span class="ns-hud-label">[ CORE_LINK: <span class="ns-hud-active">ACTIVE</span> ]</span>
+                        </div>
+
+                        <div class="ns-quote-block" id="nsQuote">
+                            <div class="ns-quote-line"></div>
+                            <p class="ns-quote">
+                                <span class="ns-quote-text"></span>
+                                <span class="ns-quote-cursor">|</span>
+                            </p>
+                            <div class="ns-quote-line"></div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: Soft Skills (Orbiting Nodes) -->
+                    <div class="ns-soft-skills">
+                        <div class="ns-soft-node" data-soft="0" style="--soft-color: #EC4899">
+                            <span class="ns-soft-emoji">✨</span>
+                            <span class="ns-soft-label">Créative</span>
+                        </div>
+                        <div class="ns-soft-node" data-soft="1" style="--soft-color: #A855F7">
+                            <span class="ns-soft-emoji">🔀</span>
+                            <span class="ns-soft-label">Polyvalente</span>
+                        </div>
+                        <div class="ns-soft-node" data-soft="2" style="--soft-color: #F472B6">
+                            <span class="ns-soft-emoji">🚀</span>
+                            <span class="ns-soft-label">Autonome</span>
+                        </div>
+                        <div class="ns-soft-node" data-soft="3" style="--soft-color: #C084FC">
+                            <span class="ns-soft-emoji">📐</span>
+                            <span class="ns-soft-label">Organisée</span>
+                        </div>
+                        <div class="ns-soft-node" data-soft="4" style="--soft-color: #E879F9">
+                            <span class="ns-soft-emoji">🔍</span>
+                            <span class="ns-soft-label">Curieuse</span>
+                        </div>
+                        <div class="ns-soft-node" data-soft="5" style="--soft-color: #D946EF">
+                            <span class="ns-soft-emoji">🌊</span>
+                            <span class="ns-soft-label">Adaptable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Neural Pathway Section -->
+        <section id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label"><span>03 — Parcours</span></div>
+                    <h2 class="section-title">Neural <span
+                            style="background: linear-gradient(135deg, var(--violet), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Pathway</span>
+                    </h2>
+                    <p style="color: rgba(255, 255, 255, 0.5); margin-top: 16px; max-width: 500px;">Du Marketing Digital
+                        vers la Data & IA — survolez les nœuds pour explorer chaque étape.</p>
+                </div>
+
+                <div class="np-container">
+                    <canvas id="npCanvas" class="np-canvas"></canvas>
+
+                    <div class="np-node np-node-sm" data-np="0" style="left: 3%; top: 65%;">
+                        <div class="np-dot" style="--np-color: #7B61FF"></div>
+                        <div class="np-label"><span class="np-year">2023</span><span
+                                class="np-title">Baccalauréat</span></div>
+                        <div class="np-card">
+                            <h4>Baccalauréat Général</h4>
+                            <span class="np-card-sub">Lycée Camille Pissarro</span>
+                            <ul>
+                                <li>Spécialités Sciences & Numérique</li>
+                                <li>Fondations en logique et analyse</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="np-node" data-np="1" style="left: 17%; top: 42%;">
+                        <div class="np-dot" style="--np-color: #8B67FF"></div>
+                        <div class="np-label"><span class="np-year">2023</span><span class="np-title">Bachelor Marketing
+                                Digital</span>
+                        </div>
+                        <div class="np-card">
+                            <h4>Bachelor Marketing Digital & Communication</h4>
+                            <span class="np-card-sub">Efrei Paris</span>
+                            <ul>
+                                <li>Spécialisation e-commerce et stratégie digitale</li>
+                                <li>Fondamentaux du marketing numérique</li>
+                                <li>Gestion de projet & communication</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="np-node" data-np="2" style="left: 33%; top: 58%;">
+                        <div class="np-dot" style="--np-color: #9B6DFF"></div>
+                        <div class="np-label"><span class="np-year">2024</span><span class="np-title">Many Dev</span>
+                        </div>
+                        <div class="np-card">
+                            <h4>Many Développement</h4>
+                            <span class="np-card-sub">Responsable Refonte Digital & UX/UI</span>
+                            <ul>
+                                <li>Refonte complète du site vitrine</li>
+                                <li>Stratégie SEO & optimisation Core Web Vitals</li>
+                                <li>Design System & composants réutilisables</li>
+                                <li>+60% trafic organique en 3 mois</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="np-node" data-np="3" style="left: 50%; top: 38%;">
+                        <div class="np-dot" style="--np-color: #A855F7"></div>
+                        <div class="np-label"><span class="np-year">2024</span><span class="np-title">Hugo Newton</span>
+                        </div>
+                        <div class="np-card">
+                            <h4>Hugo Newton</h4>
+                            <span class="np-card-sub">Assistant Webdesigner / BizDev</span>
+                            <ul>
+                                <li>Création maquettes UI sur Figma</li>
+                                <li>Développement front-end React</li>
+                                <li>Prospection B2B & qualification leads</li>
+                                <li>Support CRM & reporting</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="np-node" data-np="4" style="left: 67%; top: 55%;">
+                        <div class="np-dot" style="--np-color: #06B6D4"></div>
+                        <div class="np-label"><span class="np-year">2025</span><span class="np-title">Leroy
+                                Merlin</span></div>
+                        <div class="np-card">
+                            <h4>Leroy Merlin</h4>
+                            <span class="np-card-sub">Community Manager</span>
+                            <ul>
+                                <li>Gestion des réseaux sociaux (5 plateformes)</li>
+                                <li>Création de contenu visuel & vidéo</li>
+                                <li>Analyse données d'engagement</li>
+                                <li>+45% engagement en 2 mois</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="np-node np-node-lg" data-np="5" style="left: 84%; top: 42%;">
+                        <div class="np-dot np-dot-pulse" style="--np-color: #06B6D4"></div>
+                        <div class="np-label"><span class="np-year">En cours</span><span class="np-title">Mastère DATA &
+                                IA</span></div>
+                        <div class="np-card">
+                            <h4>Mastère DATA & IA</h4>
+                            <span class="np-card-sub">Efrei Paris</span>
+                            <ul>
+                                <li>Spécialisation en Intelligence Artificielle</li>
+                                <li>Machine Learning & Deep Learning</li>
+                                <li>Ingénierie de la donnée & pipelines</li>
+                                <li>Conception d'agents IA autonomes (LLM)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label"><span>04 — Profil</span></div>
+                    <h2 class="section-title">À propos</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="tilt-card about-card" data-tilt>
+                        <div class="tilt-card-corner tilt-card-corner-tl"></div>
+                        <div class="tilt-card-corner tilt-card-corner-tr"></div>
+                        <div class="tilt-card-corner tilt-card-corner-br"></div>
+                        <div class="tilt-card-corner tilt-card-corner-bl"></div>
+                        <div class="about-avatar">
+                            <div class="avatar">
+                                <div class="avatar-glow"></div>
+                                <div class="avatar-inner"><span>EL</span></div>
+                                <div class="avatar-status"></div>
+                            </div>
+                            <div class="about-info">
+                                <h3>Emma Loussaif</h3>
+                                <p>Data & IA Student</p>
+                            </div>
+                        </div>
+                        <p class="about-text">Bonjour, moi c'est <span>Emma</span>. Actuellement étudiante à
+                            l'<span>EFREI</span>, mon parcours mêle stratégie digitale et création de contenu. De
+                            l'animation de communautés à la refonte complète d'identités visuelles et d'interfaces
+                            <span>UX/UI</span>, j'ai appris que la créativité ne vaut rien sans <span>intention
+                                stratégique</span>.
+                        </p>
+                        <p class="about-text" style="color: rgba(255, 255, 255, 0.5);">Passionnée de sport et de ski,
+                            j'évolue avec aisance dans les environnements dynamiques. Ma curiosité naturelle me pousse à
+                            explorer sans cesse : qu'il s'agisse de développement personnel, de nouveaux outils IA ou de
+                            production audiovisuelle, je cherche toujours à comprendre, tester et optimiser pour que
+                            chaque action serve un objectif concret de performance.</p>
+                        <div class="about-contacts">
+                            <a href="mailto:emloussaif@gmail.com" class="about-contact">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                                emloussaif@gmail.com
+                            </a>
+                            <a href="tel:+33768491775" class="about-contact"
+                                style="border-color: rgba(6, 182, 212, 0.2);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                                +33 7 68 49 17 75
+                            </a>
+                        </div>
+                    </div>
+                    <div class="stats-list">
+                        <!-- Bloc 1: Bachelor -->
+                        <div class="tilt-card stat-card" data-tilt>
+                            <div class="tilt-card-corner tilt-card-corner-tl"></div>
+                            <div class="tilt-card-corner tilt-card-corner-tr"></div>
+                            <div class="tilt-card-corner tilt-card-corner-br"></div>
+                            <div class="tilt-card-corner tilt-card-corner-bl"></div>
+                            <div class="stat-content">
+                                <div class="stat-icon" style="background: rgba(123, 97, 255, 0.1);"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#7B61FF" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                                    </svg></div>
+                                <div>
+                                    <div class="stat-value"><strong>+3</strong><span>ans</span></div>
+                                    <p
+                                        style="font-size: 10px; color: rgba(255,255,255,0.3); font-weight: 300; margin-top: 4px; line-height: 1.4;">
+                                        Bachelor Marketing Digital<br>& Communication</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bloc 2: Master -->
+                        <div class="tilt-card stat-card" data-tilt>
+                            <div class="tilt-card-corner tilt-card-corner-tl"></div>
+                            <div class="tilt-card-corner tilt-card-corner-tr"></div>
+                            <div class="tilt-card-corner tilt-card-corner-br"></div>
+                            <div class="tilt-card-corner tilt-card-corner-bl"></div>
+                            <div class="stat-content">
+                                <div class="stat-icon" style="background: rgba(6, 182, 212, 0.1);"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                                        <path
+                                            d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+                                        <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+                                    </svg></div>
+                                <div>
+                                    <div class="stat-value"><strong>+1</strong><span>an</span></div>
+                                    <p
+                                        style="font-size: 10px; color: rgba(255,255,255,0.3); font-weight: 300; margin-top: 4px; line-height: 1.4;">
+                                        Mastère Data & IA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bloc 3: Langues -->
+                        <div class="tilt-card stat-card" data-tilt>
+                            <div class="tilt-card-corner tilt-card-corner-tl"></div>
+                            <div class="tilt-card-corner tilt-card-corner-tr"></div>
+                            <div class="tilt-card-corner tilt-card-corner-br"></div>
+                            <div class="tilt-card-corner tilt-card-corner-bl"></div>
+                            <div class="stat-content">
+                                <div class="stat-icon" style="background: rgba(168, 85, 247, 0.1);"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                                        <path d="M2 12h20" />
+                                    </svg></div>
+                                <div>
+                                    <div class="stat-value"><strong>3</strong><span>langues</span></div>
+                                    <p class="stat-label">FR · EN · ES</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bloc 4: Disponibilité -->
+                        <div class="tilt-card stat-card" data-tilt>
+                            <div class="tilt-card-corner tilt-card-corner-tl"></div>
+                            <div class="tilt-card-corner tilt-card-corner-tr"></div>
+                            <div class="tilt-card-corner tilt-card-corner-br"></div>
+                            <div class="tilt-card-corner tilt-card-corner-bl"></div>
+                            <div class="stat-content">
+                                <div class="stat-icon" style="background: rgba(34, 197, 94, 0.15);"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                    </svg></div>
+                                <div>
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;"><span
+                                            style="width: 8px; height: 8px; background: #4ade80; border-radius: 50%; animation: pulse 1.5s ease-in-out infinite;"></span><span
+                                            style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4ade80; text-transform: uppercase; letter-spacing: 0.05em;">Disponible</span>
+                                    </div>
+                                    <p style="color: white; font-weight: 500; margin-bottom: 4px;">Dès maintenant</p>
+                                    <p class="stat-label">Cergy-Pontoise, France</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label"><span>05 — Contact</span></div>
+                    <h2 class="section-title">Get in Touch</h2>
+                </div>
+                <div class="tilt-card contact-card" data-tilt>
+                    <div class="tilt-card-corner tilt-card-corner-tl"></div>
+                    <div class="tilt-card-corner tilt-card-corner-tr"></div>
+                    <div class="tilt-card-corner tilt-card-corner-br"></div>
+                    <div class="tilt-card-corner tilt-card-corner-bl"></div>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h3>Contactez-moi</h3>
+                            <div class="contact-links">
+                                <a href="mailto:emloussaif@gmail.com" class="contact-link">
+                                    <div class="contact-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                        </svg></div>
+                                    <div class="contact-link-text"><span>Email</span>emloussaif@gmail.com</div>
+                                    <div class="contact-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M7 7h10v10" />
+                                            <path d="M7 17 17 7" />
+                                        </svg></div>
+                                </a>
+                                <a href="tel:+33768491775" class="contact-link">
+                                    <div class="contact-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                        </svg></div>
+                                    <div class="contact-link-text"><span>Téléphone</span>+33 7 68 49 17 75</div>
+                                    <div class="contact-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M7 7h10v10" />
+                                            <path d="M7 17 17 7" />
+                                        </svg></div>
+                                </a>
+                                <a href="https://www.linkedin.com/in/emma-loussaif" target="_blank"
+                                    rel="noopener noreferrer" class="contact-link">
+                                    <div class="contact-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                            <rect width="4" height="12" x="2" y="9" />
+                                            <circle cx="4" cy="4" r="2" />
+                                        </svg></div>
+                                    <div class="contact-link-text"><span>LinkedIn</span>linkedin.com/in/emma-loussaif
+                                    </div>
+                                    <div class="contact-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M7 7h10v10" />
+                                            <path d="M7 17 17 7" />
+                                        </svg></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-branding">
+                            <div class="contact-logo-wrapper">
+                                <img src="./assets/maemlogotr.png" alt="Mæm Logo" class="contact-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <h3 class="footer-title">Merci pour votre visite !</h3>
+            <p class="footer-text">Maintenant que vous savez tout... qu'attendez-vous pour me contacter ?</p>
+            <div class="footer-divider"><span></span></div>
+            <div class="footer-easter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                    <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+                </svg>
+                <span>Built with data-driven precision</span>
+            </div>
+            <p class="footer-copyright">© 2025 Emma Loussaif — All rights reserved</p>
+        </footer>
+
+    </div><!-- /mainContent -->
+
+    <script>
+        // Scroll progress bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = progress + '%';
+        });
+
+        // Custom cursor
+        const cursor = document.getElementById('dataCursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Glitch effect on hover
+        const glitchText = document.querySelector('.glitch-text');
+        if (glitchText) {
+            glitchText.addEventListener('mouseenter', () => glitchText.classList.add('animating'));
+            glitchText.addEventListener('mouseleave', () => glitchText.classList.remove('animating'));
+        }
+
+        // Tilt effect for cards
+        document.querySelectorAll('[data-tilt]').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+
+        // Contact form
+        document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('.btn-submit');
+            btn.innerHTML = '<span style="color: #4ade80;">✓ Message envoyé !</span>';
+            setTimeout(() => {
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg> Envoyer';
+                e.target.reset();
+            }, 2000);
+        });
+
+        // CV download feedback
+        document.querySelectorAll('.cv-download-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const isHeroBtn = btn.classList.contains('btn-primary');
+                if (isHeroBtn) {
+                    const originalHTML = btn.innerHTML;
+                    btn.innerHTML = '<span style="color: #4ade80; display: flex; align-items: center; gap: 8px;">✓ Téléchargé !</span>';
+                    setTimeout(() => {
+                        btn.innerHTML = originalHTML;
+                    }, 2000);
+                } else {
+                    const tooltip = btn.querySelector('.dock-tooltip');
+                    if (tooltip) {
+                        const originalText = tooltip.textContent;
+                        tooltip.textContent = '✓';
+                        tooltip.style.color = '#4ade80';
+                        setTimeout(() => {
+                            tooltip.textContent = originalText;
+                            tooltip.style.color = '';
+                        }, 2000);
+                    }
+                }
+            });
+        });
+
+        // ── Neural Stack Canvas Renderer (Bidirectional) ─────
+        (function () {
+            var canvas = document.getElementById('nsCanvas');
+            if (!canvas) return;
+            var ctx = canvas.getContext('2d');
+            var container = document.querySelector('.ns-v2');
+            var icons = document.querySelectorAll('.ns-icon');
+            var softNodes = document.querySelectorAll('.ns-soft-node');
+            var coreRing = document.getElementById('nsCoreRing');
+            var coreGlow = document.getElementById('nsCoreGlow');
+            var hoveredHard = -1;
+            var hoveredSoft = -1;
+            var nsTime = 0;
+            var isVisible = false;
+
+            var hardColors = [
+                '#7B61FF', '#10A37F', '#D4A574', '#4285F4', '#333333',
+                '#4285F4', '#E37400', '#4285F4', '#EA4B71', '#EC4899',
+                '#7B61FF', '#007ACC', '#A259FF', '#FF9A00', '#31A8FF',
+                '#9999FF'
+            ];
+            var softColors = ['#EC4899', '#A855F7', '#F472B6', '#C084FC', '#E879F9', '#D946EF'];
+
+            function hexToRgb(hex) {
+                return 'rgb(' + parseInt(hex.slice(1, 3), 16) + ',' + parseInt(hex.slice(3, 5), 16) + ',' + parseInt(hex.slice(5, 7), 16) + ')';
+            }
+
+            function resize() {
+                var r = container.getBoundingClientRect();
+                canvas.width = r.width;
+                canvas.height = r.height;
+            }
+
+            function getPos(el) {
+                var cr = container.getBoundingClientRect();
+                var er = el.getBoundingClientRect();
+                return { x: er.left + er.width / 2 - cr.left, y: er.top + er.height / 2 - cr.top };
+            }
+
+            function drawCurve(x1, y1, x2, y2, col, alpha, width, soft) {
+                ctx.beginPath();
+                ctx.moveTo(x1, y1);
+                if (soft) {
+                    // Softer, more organic S-curve for soft skills
+                    var mx = (x1 + x2) / 2;
+                    var off = (y1 - y2) * 0.3;
+                    ctx.bezierCurveTo(x1 - 40, y1 + off, x2 + 40, y2 - off, x2, y2);
+                } else {
+                    var cx = (x1 + x2) / 2 + (x2 - x1) * 0.2;
+                    ctx.quadraticCurveTo(cx, y1, x2, y2);
+                }
+                ctx.strokeStyle = col.replace(')', ',' + alpha + ')').replace('rgb', 'rgba');
+                ctx.lineWidth = width;
+                ctx.stroke();
+            }
+
+            function drawPulse(x1, y1, x2, y2, t, col, bright, soft) {
+                for (var p = 0; p < (bright ? 3 : 2); p++) {
+                    var tt = (t + p * 0.33) % 1;
+                    var inv = 1 - tt;
+                    var px, py;
+                    if (soft) {
+                        px = inv * x1 + tt * x2;
+                        py = inv * y1 + tt * y2 + Math.sin(tt * Math.PI) * 20;
+                    } else {
+                        var cx = (x1 + x2) / 2 + (x2 - x1) * 0.2;
+                        px = inv * inv * x1 + 2 * inv * tt * cx + tt * tt * x2;
+                        py = inv * inv * y1 + 2 * inv * tt * ((y1 + y2) / 2) + tt * tt * y2;
+                    }
+                    var sz = bright ? 3.5 : 2;
+                    var a = bright ? 0.9 : 0.45;
+                    ctx.beginPath();
+                    ctx.arc(px, py, sz, 0, Math.PI * 2);
+                    ctx.fillStyle = col.replace(')', ',' + a + ')').replace('rgb', 'rgba');
+                    ctx.fill();
+                    if (bright) {
+                        ctx.shadowColor = col; ctx.shadowBlur = 12;
+                        ctx.beginPath(); ctx.arc(px, py, sz * 0.5, 0, Math.PI * 2);
+                        ctx.fillStyle = 'rgba(255,255,255,0.7)'; ctx.fill();
+                        ctx.shadowBlur = 0;
+                    }
+                }
+            }
+
+            function render() {
+                if (!isVisible) { requestAnimationFrame(render); return; }
+                resize();
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                nsTime += 0.005;
+                if (!coreRing) { requestAnimationFrame(render); return; }
+                var hub = getPos(coreRing);
+
+                // Hard Skills (left → center)
+                for (var i = 0; i < icons.length; i++) {
+                    var pos = getPos(icons[i]);
+                    var col = hexToRgb(hardColors[i]);
+                    var hot = (i === hoveredHard);
+                    drawCurve(pos.x, pos.y, hub.x, hub.y, col, hot ? 0.6 : 0.12, hot ? 2.5 : 0.7, false);
+                    var spd = hot ? nsTime * 2 : nsTime * 0.7;
+                    drawPulse(pos.x, pos.y, hub.x, hub.y, (spd + i * 0.13) % 1, col, hot, false);
+                }
+
+                // Soft Skills (right → center)
+                for (var j = 0; j < softNodes.length; j++) {
+                    var spos = getPos(softNodes[j]);
+                    var scol = hexToRgb(softColors[j]);
+                    var shot = (j === hoveredSoft);
+                    drawCurve(spos.x, spos.y, hub.x, hub.y, scol, shot ? 0.55 : 0.1, shot ? 2 : 0.6, true);
+                    var sspd = shot ? nsTime * 2.5 : nsTime * 0.6;
+                    drawPulse(spos.x, spos.y, hub.x, hub.y, (sspd + j * 0.2) % 1, scol, shot, true);
+                }
+
+                requestAnimationFrame(render);
+            }
+
+            // Hard Skill hover
+            icons.forEach(function (el, idx) {
+                el.addEventListener('mouseenter', function () { hoveredHard = idx; });
+                el.addEventListener('mouseleave', function () { hoveredHard = -1; });
+            });
+
+            // Soft Skill hover → change hub color + pulse
+            softNodes.forEach(function (el, idx) {
+                el.addEventListener('mouseenter', function () {
+                    hoveredSoft = idx;
+                    var c = softColors[idx];
+                    coreRing.style.borderColor = c + '80';
+                    coreRing.style.boxShadow = '0 0 50px ' + c + '40, inset 0 0 30px ' + c + '15';
+                    coreGlow.style.background = 'radial-gradient(circle, ' + c + '40 0%, ' + c + '15 40%, transparent 70%)';
+                });
+                el.addEventListener('mouseleave', function () {
+                    hoveredSoft = -1;
+                    coreRing.style.borderColor = '';
+                    coreRing.style.boxShadow = '';
+                    coreGlow.style.background = '';
+                });
+            });
+
+            // IntersectionObserver for perf
+            var obs = new IntersectionObserver(function (e) { isVisible = e[0].isIntersecting; }, { threshold: 0.1 });
+            obs.observe(container);
+
+            // Typewriter quote
+            var quoteText = '"Rien ne vient de rien" — Parménide';
+            var quoteEl = document.querySelector('.ns-quote-text');
+            var quoteCursor = document.querySelector('.ns-quote-cursor');
+            var quoteTyped = false;
+            if (quoteEl) {
+                var qobs = new IntersectionObserver(function (e) {
+                    if (e[0].isIntersecting && !quoteTyped) {
+                        quoteTyped = true;
+                        var ci = 0;
+                        var interval = setInterval(function () {
+                            if (ci <= quoteText.length) {
+                                quoteEl.textContent = quoteText.slice(0, ci);
+                                ci++;
+                            } else {
+                                clearInterval(interval);
+                                if (quoteCursor) quoteCursor.style.animation = 'blink 1s step-end infinite';
+                            }
+                        }, 60);
+                    }
+                }, { threshold: 0.5 });
+                qobs.observe(document.getElementById('nsQuote'));
+            }
+
+            window.addEventListener('resize', resize);
+            resize();
+            render();
+        })();
+
+        // ── Neural Pathway Canvas Renderer ──────────────────
+        (function () {
+            var canvas = document.getElementById('npCanvas');
+            if (!canvas) return;
+            var ctx = canvas.getContext('2d');
+            var container = document.querySelector('.np-container');
+            var nodes = document.querySelectorAll('.np-node');
+            if (nodes.length < 2) return;
+            var hoveredNode = -1;
+            var npTime = 0;
+            var npVisible = false;
+
+            var pathColors = ['#7B61FF', '#8B67FF', '#9B6DFF', '#A855F7', '#06B6D4', '#06B6D4'];
+
+            function resize() {
+                var r = container.getBoundingClientRect();
+                canvas.width = r.width;
+                canvas.height = r.height;
+            }
+
+            function getCenter(el) {
+                var cr = container.getBoundingClientRect();
+                var er = el.querySelector('.np-dot').getBoundingClientRect();
+                return { x: er.left + er.width / 2 - cr.left, y: er.top + er.height / 2 - cr.top };
+            }
+
+            function lerpColor(c1, c2, t) {
+                var r1 = parseInt(c1.slice(1, 3), 16), g1 = parseInt(c1.slice(3, 5), 16), b1 = parseInt(c1.slice(5, 7), 16);
+                var r2 = parseInt(c2.slice(1, 3), 16), g2 = parseInt(c2.slice(3, 5), 16), b2 = parseInt(c2.slice(5, 7), 16);
+                var r = Math.round(r1 + (r2 - r1) * t), g = Math.round(g1 + (g2 - g1) * t), b = Math.round(b1 + (b2 - b1) * t);
+                return 'rgb(' + r + ',' + g + ',' + b + ')';
+            }
+
+            function bezierPoint(p0, cp1, cp2, p1, t) {
+                var inv = 1 - t;
+                return {
+                    x: inv * inv * inv * p0.x + 3 * inv * inv * t * cp1.x + 3 * inv * t * t * cp2.x + t * t * t * p1.x,
+                    y: inv * inv * inv * p0.y + 3 * inv * inv * t * cp1.y + 3 * inv * t * t * cp2.y + t * t * t * p1.y
+                };
+            }
+
+            function render() {
+                if (!npVisible) { requestAnimationFrame(render); return; }
+                resize();
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                npTime += 0.004;
+
+                var centers = [];
+                for (var i = 0; i < nodes.length; i++) centers.push(getCenter(nodes[i]));
+
+                // Draw paths between consecutive nodes
+                for (var s = 0; s < centers.length - 1; s++) {
+                    var p0 = centers[s], p1 = centers[s + 1];
+                    var dx = p1.x - p0.x;
+                    var cp1 = { x: p0.x + dx * 0.4, y: p0.y };
+                    var cp2 = { x: p1.x - dx * 0.4, y: p1.y };
+                    var segHot = (hoveredNode === s || hoveredNode === s + 1);
+
+                    // Draw curve
+                    var grad = ctx.createLinearGradient(p0.x, p0.y, p1.x, p1.y);
+                    grad.addColorStop(0, pathColors[s]);
+                    grad.addColorStop(1, pathColors[s + 1]);
+                    ctx.beginPath();
+                    ctx.moveTo(p0.x, p0.y);
+                    ctx.bezierCurveTo(cp1.x, cp1.y, cp2.x, cp2.y, p1.x, p1.y);
+                    ctx.strokeStyle = grad;
+                    ctx.lineWidth = segHot ? 3 : 1.5;
+                    ctx.globalAlpha = segHot ? 0.7 : 0.25;
+                    ctx.stroke();
+                    ctx.globalAlpha = 1;
+
+                    // Particles flowing along curve
+                    var numP = segHot ? 5 : 3;
+                    for (var p = 0; p < numP; p++) {
+                        var speed = segHot ? npTime * 1.5 : npTime * 0.8;
+                        var tt = (speed + s * 0.2 + p * (1 / numP)) % 1;
+                        var pt = bezierPoint(p0, cp1, cp2, p1, tt);
+                        var col = lerpColor(pathColors[s], pathColors[s + 1], tt);
+                        var sz = segHot ? 3 : 1.8;
+
+                        ctx.beginPath();
+                        ctx.arc(pt.x, pt.y, sz, 0, Math.PI * 2);
+                        ctx.fillStyle = col;
+                        ctx.globalAlpha = segHot ? 0.9 : 0.5;
+                        ctx.fill();
+                        ctx.globalAlpha = 1;
+
+                        if (segHot) {
+                            ctx.shadowColor = col;
+                            ctx.shadowBlur = 14;
+                            ctx.beginPath();
+                            ctx.arc(pt.x, pt.y, sz * 0.5, 0, Math.PI * 2);
+                            ctx.fillStyle = 'rgba(255,255,255,0.6)';
+                            ctx.fill();
+                            ctx.shadowBlur = 0;
+                        }
+                    }
+                }
+
+                requestAnimationFrame(render);
+            }
+
+            // hover handlers
+            nodes.forEach(function (el, idx) {
+                el.addEventListener('mouseenter', function () { hoveredNode = idx; });
+                el.addEventListener('mouseleave', function () { hoveredNode = -1; });
+            });
+
+            var obs = new IntersectionObserver(function (e) { npVisible = e[0].isIntersecting; }, { threshold: 0.1 });
+            obs.observe(container);
+
+            window.addEventListener('resize', resize);
+            resize();
+            render();
+        })();
+
+        // ── Focus Modal Logic ─────────────────────────────
+        const projectsData = {
+            'artlink-strategie': {
+                subtitle: 'Analyse & Cadrage',
+                title: 'ArtLink — Stratégie & Cadrage Luxe',
+                color: '#7B61FF',
+                logo: './assets/logoartlink.png',
+                description: 'Développement d\'une plateforme e-commerce B2B2C immersive permettant aux hôtels de luxe de circulariser et vendre leurs collections d\'art à une clientèle exclusive.\n\nConcept : Créer une synergie entre le prestige des établissements partenaires et une audience restreinte de collectionneurs, garantissant une seconde vie aux œuvres (peintures, sculptures) au sein d\'un écosystème ultra-privé.\n\nInnovation : Sécurisation de l\'accès par vérification de résidence hôtelière et digitalisation d\'un catalogue premium pour une expérience d\'acquisition fluide, responsable et haut de gamme.',
+                tags: ['B2B2C', 'Marketplace Privée', 'Art Curating', 'Exclusivité'],
+                impact: 'Économie Circulaire Luxe',
+                videoUrl: 'https://www.youtube.com/embed/rxgO0UWJxck',
+                gallery: [
+                    './assets/artlink-sign-in-2.png',
+                    './assets/artlink-sign-in.png',
+                    './assets/artlink-dashboard.png',
+                    './assets/artlink-checkout.png'
+                ]
+            },
+            'bic-keith-haring': {
+                subtitle: 'Expérience Digitale & 3D',
+                title: 'BIC X KEITH HARING — Expérience Digitale & 3D',
+                color: '#06B6D4',
+                logo: './assets/logo-keithharing.png',
+                description: 'Développement d\'une plateforme e-commerce immersive "L\'art prend vie" intégrant une modélisation 3D réelle des produits et une stratégie de gamification interactive.\n\nConcept : Utiliser le digital pour rendre l\'art accessible, en créant une synergie entre la fiabilité de BIC et l\'esthétique iconique de Keith Haring.\n\nInnovation : Visualisation dynamique des volumes (trousse, stylos) et intégration d\'un mini-jeu "Snake X Haring" pour l\'engagement utilisateur.',
+                tags: ['E-commerce', 'Modélisation 3D', 'Gamification', 'UX Design', 'Branding'],
+                impact: 'Immersion Digitale Totale',
+                videoUrl: 'https://www.youtube.com/embed/mznLrCWxsMk',
+                gallery: [
+                    './assets/bic-moodboard.png',
+                    './assets/bic-trousse-ambiance.png',
+                    './assets/bic-facade-concept-store.png',
+                    './assets/bic-trousse-sur-table.png'
+                ]
+            },
+            'kumo': {
+                subtitle: 'Stratégie de Marque & SEA',
+                title: 'KUMO — Stratégie de Marque & SEA',
+                color: '#EC4899',
+                logo: './assets/logo-kumo.png',
+                description: 'Création intégrale d\'une marque de mode minimaliste : de l\'identité visuelle ("Style Nuage") au lancement de campagnes Google Ads (Search, YouTube, Display) pour 2026.\n\nConcept : Redéfinir l\'essentiel avec un vestiaire mature, privilégiant le coton organique et la transparence radicale.\n\nInnovation Digital : Mise en œuvre d\'un écosystème publicitaire complet avec reciblage (remarketing) et analyse de KPIs avancés (ROAS, VTR, Part de voix).\n\nCibles : Audience 18-34 ans, segmentée par affinité Streetwear & Design minimaliste.',
+                tags: ['Brand Identity', 'SEA Strategy', 'E-commerce', 'Google Ads', 'Remarketing'],
+                impact: '160M d\'impressions visées',
+                videoUrl: 'https://www.youtube.com/embed/CGzZFEq15d0',
+                gallery: [
+                    './assets/kumo-header.png',
+                    './assets/kumo-sweat-bleu.png',
+                    './assets/kumo-sweat-rouge.png',
+                    './assets/kumo-logo.png'
+                ]
+            }
+        };
+
+        function openProjectModal(projectId) {
+            const data = projectsData[projectId];
+            if (!data) return;
+            const modal = document.getElementById('focusModal');
+            const overlay = document.getElementById('focusOverlay');
+            const card = document.getElementById('focusCard');
+            const mainContent = document.getElementById('mainContent');
+
+            document.getElementById('modalSubtitle').textContent = data.subtitle;
+            const titleEl = document.getElementById('modalTitle');
+            titleEl.textContent = data.title;
+            titleEl.setAttribute('data-text', data.title);
+            document.getElementById('modalDescription').textContent = data.description;
+            document.getElementById('modalImpact').textContent = data.impact;
+            document.getElementById('modalImpact').style.color = data.color;
+
+            card.style.borderColor = data.color + '60';
+            card.style.boxShadow = '0 0 60px ' + data.color + '20, 0 25px 80px rgba(0,0,0,0.6)';
+
+            // ── Dynamic Logo ─────────────────────────────
+            var logoEl = document.querySelector('.focus-logo');
+            if (logoEl && data.logo) {
+                logoEl.src = data.logo;
+                logoEl.alt = data.title + ' Logo';
+            }
+
+            // ── YouTube Video ─────────────────────────────
+            var videoArea = document.getElementById('modalVideoArea');
+            videoArea.style.borderColor = data.color + '30';
+            if (data.videoUrl) {
+                videoArea.innerHTML = '<iframe id="modalIframe" src="' + data.videoUrl + '?rel=0&modestbranding=1&color=white&iv_load_policy=3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:none;border-radius:16px;"></iframe>';
+            } else {
+                videoArea.innerHTML = '<div class="focus-video-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg><span>Demo Video</span></div>';
+            }
+
+            // ── Gallery Images ────────────────────────────
+            var galleryEl = document.getElementById('modalGallery');
+            if (data.gallery && data.gallery.length > 0) {
+                galleryEl.innerHTML = data.gallery.map(function (src, idx) {
+                    return '<div class="focus-gallery-item" onclick="openLightbox(\'' + src + '\')"><img src="' + src + '" alt="ArtLink screenshot ' + (idx + 1) + '" loading="lazy"><div class="focus-gallery-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></div></div>';
+                }).join('');
+            } else {
+                galleryEl.innerHTML = '<div class="focus-gallery-item"></div><div class="focus-gallery-item"></div><div class="focus-gallery-item"></div><div class="focus-gallery-item"></div>';
+            }
+
+            document.getElementById('modalTags').innerHTML = data.tags.map(function (t) {
+                return '<span class="modal-tag" style="color:' + data.color + ';border-color:' + data.color + '40;">' + t + '</span>';
+            }).join('');
+
+            overlay.classList.add('open');
+            modal.classList.add('open');
+            if (mainContent) mainContent.classList.add('blurred');
+            document.body.style.overflow = 'hidden';
+
+            setTimeout(function () {
+                titleEl.classList.add('animating');
+                setTimeout(function () { titleEl.classList.remove('animating'); }, 300);
+            }, 400);
+        }
+
+        function closeProjectModal() {
+            // Stop the YouTube video when closing
+            var iframe = document.getElementById('modalIframe');
+            if (iframe) iframe.src = '';
+            document.getElementById('focusModal').classList.remove('open');
+            document.getElementById('focusOverlay').classList.remove('open');
+            var mc = document.getElementById('mainContent');
+            if (mc) mc.classList.remove('blurred');
+            document.body.style.overflow = '';
+        }
+
+        // ── Lightbox ──────────────────────────────────
+        function openLightbox(src) {
+            var lb = document.getElementById('lightboxOverlay');
+            var img = document.getElementById('lightboxImage');
+            img.src = src;
+            lb.classList.add('open');
+        }
+
+        function closeLightbox() {
+            var lb = document.getElementById('lightboxOverlay');
+            lb.classList.remove('open');
+            setTimeout(function () { document.getElementById('lightboxImage').src = ''; }, 300);
+        }
+
+        document.getElementById('focusOverlay').addEventListener('click', closeProjectModal);
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                if (document.getElementById('lightboxOverlay').classList.contains('open')) {
+                    closeLightbox();
+                } else {
+                    closeProjectModal();
+                }
+            }
+        });
+
+    </script>
+    <script src="./particles.js"></script>
+
+    <!-- Focus Overlay -->
+    <div class="focus-overlay" id="focusOverlay"></div>
+
+    <!-- Focus Modal -->
+    <div class="focus-modal" id="focusModal">
+        <div class="focus-card" id="focusCard">
+            <button class="focus-close" onclick="closeProjectModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </button>
+            <div class="focus-layout">
+                <div class="focus-media">
+                    <div class="focus-video" id="modalVideoArea">
+                        <!-- Populated dynamically by openProjectModal -->
+                    </div>
+                    <div class="focus-gallery-label">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                            <circle cx="9" cy="9" r="2" />
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                        </svg>
+                        <span>Galerie</span>
+                    </div>
+                    <div class="focus-gallery" id="modalGallery">
+                        <!-- Populated dynamically by openProjectModal -->
+                    </div>
+                </div>
+                <div class="focus-info">
+                    <div class="focus-header-row">
+                        <img src="./assets/logoartlink.png" alt="ArtLink Logo" class="focus-logo">
+                        <div>
+                            <p class="focus-subtitle" id="modalSubtitle"></p>
+                            <h2 class="focus-title glitch-text" id="modalTitle" data-text=""></h2>
+                        </div>
+                    </div>
+                    <div class="focus-impact">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m5 12 5 5L20 7" />
+                        </svg>
+                        <span id="modalImpact"></span>
+                    </div>
+                    <div class="focus-tags" id="modalTags"></div>
+                    <div class="focus-divider"></div>
+                    <p class="focus-description" id="modalDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Overlay -->
+    <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+            </svg>
+        </button>
+        <img id="lightboxImage" src="" alt="Fullscreen preview" onclick="event.stopPropagation()">
+    </div>
+
+</body>
+
+</html>
